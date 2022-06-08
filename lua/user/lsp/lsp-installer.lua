@@ -3,12 +3,12 @@ if not status_ok then
 	return
 end
 
-local lspconfig = require("lspconfig")
+local lspconfig = require "lspconfig"
 
-local servers = {  "sumneko_lua", "tsserver" }
+local servers = { "sumneko_lua", "tsserver" }
 
 lsp_installer.setup {
-	ensure_installed = servers
+	ensure_installed = servers,
 }
 
 for _, server in pairs(servers) do
@@ -18,7 +18,7 @@ for _, server in pairs(servers) do
 	}
 	local has_custom_opts, server_custom_opts = pcall(require, "user.lsp.settings." .. server)
 	if has_custom_opts then
-	 	opts = vim.tbl_deep_extend("force", server_custom_opts, opts)
+		opts = vim.tbl_deep_extend("force", server_custom_opts, opts)
 	end
 	lspconfig[server].setup(opts)
 end
