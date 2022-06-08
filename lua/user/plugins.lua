@@ -81,9 +81,12 @@ return packer.startup(function(use)
   use {
     'goolord/alpha-nvim',
     requires = { 'kyazdani42/nvim-web-devicons' },
-    config = function ()
-        require'alpha'.setup(require'alpha.themes.dashboard'.config)
-    end
+  }
+
+  -- Treesitter
+  use {
+    "nvim-treesitter/nvim-treesitter",
+    run = ":TSUpdate"
   }
 
   -- Automatically set up your configuration after cloning packer.nvim
