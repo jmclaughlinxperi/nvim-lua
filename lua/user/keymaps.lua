@@ -64,3 +64,6 @@ keymap("n", "<leader>e", ":NvimTreeToggle<cr>", opts)
 -- Telescope
 keymap("n", "<leader>ff", "<cmd>Telescope find_files<cr>", opts)
 keymap("n", "<leader>fg", "<cmd>Telescope live_grep<cr>", opts)
+
+-- BufDel
+keymap("n", "<C-d>", "<cmd>BufDel<cr>", opts)
