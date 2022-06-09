@@ -44,9 +44,7 @@ nvim_tree.setup {
 		ignore_list = {},
 	},
 	actions = {
-		change_dir = {
-			restrict_above_cwd = true,
-		},
+		change_dir = {},
 	},
 	git = {
 		enable = true,

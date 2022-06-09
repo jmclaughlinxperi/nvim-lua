@@ -55,6 +55,10 @@ return packer.startup(function(use)
 
 	-- Colourscheme
 	use "ellisonleao/gruvbox.nvim"
+	use {
+		"catppuccin/nvim",
+		as = "catppuccin",
+	}
 
 	-- Completion
 	use "hrsh7th/nvim-cmp" -- The completion plugin
@@ -91,10 +95,8 @@ return packer.startup(function(use)
 		run = ":TSUpdate",
 	}
 
-	use {
-		"catppuccin/nvim",
-		as = "catppuccin",
-	}
+	-- Bufferline
+	use { "akinsho/bufferline.nvim", tag = "v2.*", requires = "kyazdani42/nvim-web-devicons" }
 
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins

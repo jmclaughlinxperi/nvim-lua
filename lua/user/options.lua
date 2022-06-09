@@ -15,10 +15,11 @@ vim.opt.wrap = false
 vim.opt.swapfile = false
 vim.opt.incsearch = true
 vim.opt.termguicolors = true
-vim.opt.signcolumn = 'yes'
+vim.opt.signcolumn = "yes"
 vim.opt.scrolloff = 8
-vim.opt.fileformat = 'unix'
+vim.opt.fileformat = "unix"
 vim.opt.updatetime = 300
+vim.opt.pumheight = 12
 
-vim.cmd 'autocmd CmdlineEnter /,? :set hlsearch'
-vim.cmd 'autocmd CmdlineLeave /,? :set nohlsearch'
+vim.cmd "autocmd CmdlineEnter /,? :set hlsearch"
+vim.cmd "autocmd CmdlineLeave /,? :set nohlsearch"
