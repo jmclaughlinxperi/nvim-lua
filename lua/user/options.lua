@@ -20,6 +20,7 @@ vim.opt.scrolloff = 8
 vim.opt.fileformat = "unix"
 vim.opt.updatetime = 300
 vim.opt.pumheight = 12
+vim.opt.laststatus = 3
 
 vim.cmd "autocmd CmdlineEnter /,? :set hlsearch"
 vim.cmd "autocmd CmdlineLeave /,? :set nohlsearch"
